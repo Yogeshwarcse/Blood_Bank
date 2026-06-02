@@ -47,7 +47,7 @@ export default function Navigation({ activeTab, setActiveTab }) {
   ];
 
   return (
-    <nav className="bg-white shadow-sm border-b">
+    <nav className="bg-white shadow-sm border-b" aria-label="Main navigation">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -85,6 +85,7 @@ export default function Navigation({ activeTab, setActiveTab }) {
             size="sm"
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
